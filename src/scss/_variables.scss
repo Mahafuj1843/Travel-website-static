@@ -1,0 +1,43 @@
+/*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+
+$body-bg: hsl(0, 0%, 0%);
+$gradient-bg: radial-gradient(ellipse at 0% 0%,#e2ffc1 0%,#fff 75%);
+$main-color: hsl(0, 0%, 0%);
+$container-color: hsl(0, 0%, 8%);
+$title-color: hsl(0, 0%, 95%);
+$txt-color: hsl(0, 0%, 70%);
+$text-color-light: hsl(0, 0%, 60%);
+
+$white: #fff;
+$black: #000;
+
+$box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+$header-height: 3.5rem;//8rem;
+$header-shrink-height: 5rem;
+$border-radius: 30px;
+
+/*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+$body-font: "Poppins", sans-serif;
+$second-font: "Montserrat", sans-serif;
+$biggest-font-size: 2.75rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1rem;
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+/*========== Font weight ==========*/
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+
+/*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;
+
+$mobile-width: 600px;
+$tablet-width: 1024px;

@@ -1,0 +1,76 @@
+@use "../../scss/" as *;
+
+.about{
+
+    .about_container{
+        row-gap: 3rem;
+
+        @media only screen and (min-width: 576px) {
+            grid-template-columns: 380px;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 350px);
+            align-items: center;
+        }
+
+        @media only screen and (min-width: 1152px) {
+            grid-template-columns: 400px 460px;
+            column-gap: 8.5rem;
+            padding-block: 1rem;
+        }
+
+        .about_data{
+            text-align: center;
+            justify-content: space-between;
+
+            .about_title{
+                margin-bottom: 1rem;
+            }
+            .about_desc{
+                margin-bottom: 2rem;
+
+                @media only screen and (min-width: 1152px) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .about_image{
+            position: relative;
+            justify-self: center;
+            overflow: hidden;
+            cursor: pointer;
+
+            .about_img{
+                width: 460px;
+                max-height: 460px;
+                margin: 0 auto;
+                transition: transform .4s;
+
+                @media only screen and (min-width: 576px) {
+                    grid-template-columns: 100%;
+                }
+
+                @media only screen and (min-width: 1152px) {
+                    width: 460px;
+                }
+            }
+            .about_shadow{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg,
+                hsla(0, 0%, 0%, 0) 50%,
+                hsl(0, 0%, 0%) 125%);
+            }
+
+            &:hover .about_img{
+                transform: scale(1.2);
+            }
+        }
+    }
+}

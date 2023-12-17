@@ -1,0 +1,44 @@
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Font weight ==========*/
+/*========== z index ==========*/
+.gallery .gallery_title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.gallery .gallery_container {
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+@media only screen and (min-width: 50em) {
+  .gallery .gallery_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 50em) {
+  .gallery .gallery_container .grid_col_span-2 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .gallery .gallery_container .gallery_card:last-child {
+    grid-column-start: 4;
+    grid-row: 1/span 2;
+  }
+}
+.gallery .gallery_container .gallery_card .gallery_image {
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery .gallery_container .gallery_card .gallery_image:hover .gallery_img {
+  transform: scale(1.2);
+}
+.gallery .gallery_container .gallery_card .gallery_image .gallery_img {
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: transform 0.4s;
+}/*# sourceMappingURL=gallery.css.map */

@@ -1,0 +1,73 @@
+@use "../../scss/" as *;
+
+.question {
+    background-color: hsla(0, 0%, 100%, .2);
+
+    .question_title {
+        font-size: $h2-font-size;
+        text-align: center
+    }
+
+    .question_container {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: flex-start;
+        }
+
+        .question_group {
+            display: grid;
+            row-gap: 1.5rem;
+
+            .question_item {
+                background-color: black;
+                border-radius: .25rem;
+                transition: .3s;
+
+                &:hover {
+                    box-shadow: 0 2px 8px hsla(150, 5%, 85%, 0.35);
+                }
+
+                .question_header {
+                    display: flex;
+                    align-items: center;
+                    column-gap: .5rem;
+                    padding: .75rem .5rem;
+                    cursor: pointer;
+                    transition: .3s;
+
+                    .icon {
+                        font-size: 1.25rem;
+                        color: $title-color;
+                        transition: transform .3s;
+                    }
+
+                    .item_title {
+                        font-size: $small-font-size;
+                        font-weight: $font-medium;
+                        transition: .3s;
+                    }
+                }
+
+                .question_content {
+                    height: 0;
+                    overflow: hidden;
+                    transition: .3s;
+
+                    .question_desc {
+                        font-size: $smaller-font-size;
+                        padding: 0 1.25rem 1.25rem 2.5rem;
+                        transition: .3s;
+                    }
+                }
+            }
+
+            .accrodion_open .icon{
+                transform: rotate(135deg) !important;
+            }
+        }
+    }
+
+}

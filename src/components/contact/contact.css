@@ -1,0 +1,102 @@
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Font weight ==========*/
+/*========== z index ==========*/
+.contact {
+  padding: 4rem 0;
+}
+.contact .contact_container {
+  row-gap: 3.5rem;
+  padding: 4rem 0;
+}
+@media only screen and (min-width: 696px) {
+  .contact .contact_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact .contact_container .contact_content .contact_title {
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 695px) {
+  .contact .contact_container .contact_content .contact_title {
+    text-align: center;
+  }
+}
+.contact .contact_container .contact_content .contact_data {
+  display: grid;
+  row-gap: 2rem;
+}
+.contact .contact_container .contact_content .contact_data .contact_information .contact_subtitle {
+  font-size: 0.938rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 70%);
+  margin-bottom: 0.5rem;
+}
+.contact .contact_container .contact_content .contact_data .contact_information .contact_desc {
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: hsl(0, 0%, 95%);
+  font-weight: 500;
+}
+.contact .contact_container .contact_content .contact_data .contact_information .contact_desc i {
+  font-size: 1.25rem;
+}
+.contact .contact_container .contact_form .contact_inputs {
+  display: grid;
+  row-gap: 2rem;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content {
+  position: relative;
+  height: 3rem;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content .contact_input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1rem 1rem 0;
+  background: none;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content .contact_input:focus + .contact_label {
+  top: -0.75rem;
+  left: 0;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content .contact_input:not(:-moz-placeholder-shown).contact_input:not(:focus) + .contact_label {
+  top: -0.75rem;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content .contact_input:not(:placeholder-shown).contact_input:not(:focus) + .contact_label {
+  top: -0.75rem;
+  font-size: 0.75rem;
+  z-index: 10;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content .contact_label {
+  position: absolute;
+  top: 0.75rem;
+  width: 100%;
+  font-size: 0.813rem;
+  color: hsl(0, 0%, 70%);
+  transition: 0.3s;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content.contact_area {
+  height: 7rem;
+}
+.contact .contact_container .contact_form .contact_inputs .contact_input_content.contact_area textarea {
+  resize: none;
+}
+.contact .contact_container .contact_form .contact_button {
+  cursor: pointer;
+  margin-top: 2.5rem;
+}/*# sourceMappingURL=contact.css.map */

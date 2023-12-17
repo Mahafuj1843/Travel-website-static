@@ -1,0 +1,99 @@
+@use "../../scss/" as *;
+
+.explore {
+    position: relative;
+
+    .explore_container {
+        @media only screen and (min-width: 576px) {
+            grid-template-columns: 380px;
+            justify-content: center;
+        }
+        .explore_image {
+            position: absolute;
+            overflow: hidden;
+
+            .explore_img {
+                width: 100%;
+                height: 333px;
+                object-fit: cover;
+                object-position: center;
+
+                @media only screen and (min-width: 576px) {
+                    width: 100vw;
+                }
+
+                @media only screen and (min-width: 1152px) {
+                    height: 600px;
+                }
+            }
+
+            .explore_shadow{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg,
+                        hsl(0, 0%, 0%) 5%,
+                        hsla(0, 0%, 0%, 0) 40%,
+                        hsla(0, 0%, 0%, 0) 60%,
+                        hsl(0, 0%, 0%) 92%);
+            }
+        }
+
+        .explore_content{
+            position: relative;
+            padding-top: 16rem;
+            text-align: center;
+            row-gap: 2.5rem;
+
+            @media only screen and (min-width: 1152px) {
+                grid-template-columns: 670px 1fr;
+                padding-top: 28rem;
+            }
+
+            .explore_data {
+                @media only screen and (min-width: 1152px) {
+                    text-align: initial;
+                }
+
+                .explore_title {
+                    margin-bottom: 1rem;
+                    @media only screen and (min-width: 1152px) {
+                        text-align: initial;
+                    }
+
+                    .explore_desc {
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+
+            .explore_cards{
+                display: flex;
+                align-items: flex-start;
+                column-gap: 1.5rem;
+
+                .explore_card{
+                    border-radius: .5rem;
+                    overflow: hidden;
+                    cursor: pointer;
+                    
+                    &:hover .explore_card_img{
+                        transform: scale(1.2);
+                    }
+
+                    &:nth-child(2){
+                        margin-top: 1rem;
+                    }
+        
+        
+                    .explore_card_img{
+                        width: 200px;
+                        transition: transform .4s;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@use "../../scss/" as *;
+
+.home{
+    position: relative;
+
+    .home_bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 750px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .home_shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+        background: linear-gradient(180deg,
+                    hsla(0, 0%, 0%, 0) 58%,
+                    hsl(0, 0%, 0%) 78%);
+        
+                    @media only screen and (min-width: 1152px) {
+                        height: 810px;
+                      }
+    }
+
+    .home_container{
+        position: relative;
+        padding-top: 3rem;
+        row-gap: 3rem;
+
+        @media only screen and (min-width: 576px) {
+            grid-template-columns: 380px;
+            justify-content: center;
+        }
+
+        @media only screen and (min-width: 1152px) {
+            grid-template-columns: initial;
+            justify-content: initial;
+            grid-row: 4rem;
+            padding-top: 6.5rem;
+        }
+
+        .home_data{
+            text-align: center;
+
+            @media only screen and (min-width: 1152px) {
+                text-align: initial;
+                width: 480px;
+            }
+
+            .home_subtitle{
+                font-size: $h3-font-size;
+                margin-bottom: .5rem;
+                color: $white;
+
+                @media only screen and (min-width: 1152px) {
+                    font-size: $h2-font-size;
+                }
+            }
+            .home_title{
+                font-size: $biggest-font-size;
+                margin-bottom: 1rem;
+                color: $white;
+            }
+            .home_desc{
+                margin-bottom: 2rem;
+                color: $title-color;
+
+                @media only screen and (min-width: 1152px) {
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .home_cards{
+        grid-template-columns: 240px;
+        justify-content: center;
+
+        @media only screen and (min-width: 768px) {
+            grid-template-columns: repeat(2, 240px);
+        }
+
+        @media only screen and (min-width: 1152px) {
+            grid-template-columns: repeat(4, 240px);
+        }
+
+        .home_card{
+            position: relative;
+            overflow: hidden;
+
+            &:hover .home_card_img{
+                transform: scale(1.2);
+            }
+
+            .home_card_img{
+                transition: transform .4s;
+            }
+            .home_card_title{
+                position: absolute;
+                left: 1rem;
+                bottom: 1rem;
+                font-size: $h3-font-size;
+                z-index: 1;
+
+                @media only screen and (min-width: 1152px) {
+                    left: 1.5rem;
+                    bottom: 1.5rem;
+                }
+            }
+            .home_card_shadow{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg,
+                    hsla(0, 0%, 0%, 0) 50%,
+                    hsl(0, 0%, 0%) 125%);
+            }
+        }
+    }
+}

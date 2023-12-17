@@ -1,0 +1,78 @@
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Font weight ==========*/
+/*========== z index ==========*/
+.popular .section_title {
+  text-align: center;
+}
+.popular .popular_container {
+  padding-top: 1.5rem;
+  grid-template-columns: 240px;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+@media only screen and (min-width: 792px) {
+  .popular .popular_container {
+    grid-template-columns: repeat(3, 240px);
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .popular .popular_container {
+    grid-template-columns: repeat(3, 240px);
+  }
+}
+@media only screen and (min-width: 1152px) {
+  .popular .popular_container {
+    grid-template-columns: repeat(3, 300px);
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    padding-top: 4rem;
+  }
+}
+.popular .popular_container .popular_card .popular_image {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.popular .popular_container .popular_card .popular_image .popular_img {
+  transition: transform 0.4s;
+}
+.popular .popular_container .popular_card .popular_image .popular_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+.popular .popular_container .popular_card .popular_image:hover .popular_img {
+  transform: scale(1.2);
+}
+.popular .popular_container .popular_card .popular_title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 1152px) {
+  .popular .popular_container .popular_card .popular_title {
+    font-size: 1.25rem;
+  }
+}
+.popular .popular_container .popular_card .popular_location {
+  display: inline-flex;
+  align-items: center;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+  font-size: 0.813rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+}
+@media only screen and (min-width: 1152px) {
+  .popular .popular_container .popular_card .popular_location {
+    font-size: 0.938rem;
+  }
+}
+.popular .popular_container .popular_card .popular_location i {
+  font-size: 1rem;
+}/*# sourceMappingURL=popular.css.map */

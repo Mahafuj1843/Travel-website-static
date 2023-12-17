@@ -1,0 +1,51 @@
+@use "../../scss/" as *;
+
+.gallery {
+
+    .gallery_title{
+        font-size: $h1-font-size;
+        text-align: center
+    }
+
+    .gallery_container {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+
+        @media only screen and (min-width: 50em) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid_col_span-2 {
+            @media only screen and (min-width: 50em) {
+                grid-column: span 2;
+            }
+        }
+
+        .gallery_card {
+            &:last-child {
+                @media only screen and (min-width: 800px) {
+                    grid-column-start: 4;
+                    // grid-row-start: 1;
+                    // grid-row-end: 3;
+                    grid-row: 1 / span 2;
+                }
+            }
+
+            .gallery_image {
+                height: 100%;
+                overflow: hidden;
+                cursor: pointer;
+
+                &:hover .gallery_img {
+                    transform: scale(1.2);
+                }
+
+                .gallery_img {
+                    height: 100%;
+                    object-fit: fill;
+                    transition: transform .4s;
+                }
+            }
+        }
+    }
+}

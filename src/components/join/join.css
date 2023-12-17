@@ -1,0 +1,87 @@
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+/*========== Font weight ==========*/
+/*========== z index ==========*/
+.join .join_container {
+  row-gap: 3rem;
+  padding-bottom: 2.5rem;
+}
+@media only screen and (min-width: 576px) {
+  .join .join_container {
+    grid-template-columns: 380px;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .join .join_container {
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1152px) {
+  .join .join_container {
+    grid-template-columns: 460px 340px;
+    padding-block: 1rem 5rem;
+    -moz-column-gap: 7.5rem;
+         column-gap: 7.5rem;
+  }
+}
+.join .join_container .join_data {
+  text-align: center;
+}
+.join .join_container .join_data .join_title {
+  margin-bottom: 2rem;
+}
+.join .join_container .join_data .join_desc {
+  margin-bottom: 2rem;
+}
+@media only screen and (min-width: 1152px) {
+  .join .join_container .join_data .join_desc {
+    margin-bottom: 3rem;
+  }
+}
+.join .join_container .join_data .join_form {
+  display: grid;
+  row-gap: 1rem;
+}
+.join .join_container .join_data .join_form .join_input {
+  padding: 1.25rem 1rem;
+  background-color: hsl(0, 0%, 8%);
+}
+.join .join_container .join_data .join_form .join_button {
+  cursor: pointer;
+}
+.join .join_container .join_image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .join .join_container .join_image {
+    order: -1;
+  }
+}
+.join .join_container .join_image .join_img {
+  width: 100%;
+  transition: transform 0.4s;
+}
+@media only screen and (min-width: 1152px) {
+  .join .join_container .join_image .join_img {
+    width: 460px;
+    max-height: 340px;
+  }
+}
+.join .join_container .join_image .join_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 50%, hsl(0, 0%, 0%) 125%);
+}
+.join .join_container .join_image:hover .join_img {
+  transform: scale(1.2);
+}/*# sourceMappingURL=join.css.map */

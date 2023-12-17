@@ -1,0 +1,128 @@
+@use "../../scss/" as *;
+
+.footer {
+    padding-block: 2.5rem;
+    background-color: $container-color;
+
+    @media only screen and (min-width: 1152px) {
+       padding-block: 5rem 3rem;
+    }
+
+        .footer_container {
+            .footer_content {
+                row-gap: 3.5rem;
+    
+                @media only screen and (min-width: 768px) {
+                    grid-template-columns: repeat(2, max-content);
+                    justify-content: space-between;
+                }
+    
+                div{
+                    .footer_logo {
+                        display: inline-block;
+                        color: $title-color;
+                        font-size: $h2-font-size;
+                        font-family: $second-font;
+                        font-weight: $font-semi-bold;
+                        margin-bottom: 1rem;
+                    }
+        
+                    .footer_desc {}
+                }
+    
+                .footer_data {
+                    grid-template-columns: repeat(2, max-content);
+                    row-gap: 2.5rem;
+                    justify-content: space-between;
+    
+                    @media only screen and (min-width: 576px) {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+    
+                    @media only screen and (min-width: 768px) {
+                        grid-template-columns: repeat(2, 1fr);
+                        column-gap: 6.5rem;
+                    }
+    
+                    @media only screen and (min-width: 1023px) {
+                        grid-template-columns: repeat(4, 1fr);
+                        column-gap: 4.5rem;
+                    }
+        
+                    .footer_title {
+                        font-size: $h3-font-size;
+                        margin-bottom: 1rem;
+    
+                        @media only screen and (min-width: 1152px) {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+        
+                    .footer_links {
+                        display: grid;
+                        row-gap: .75rem;
+        
+                        .footer_link {
+                            color: $txt-color;
+                            transition: color .4s;
+        
+                            &:hover {
+                                color: $title-color;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .footer_group {
+                display: flex;
+                margin-top: 5rem;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 2rem;
+    
+                @media only screen and (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+    
+                @media only screen and (min-width: 1152px) {
+                    margin-top: 7rem;
+                }
+    
+                .footer_social {
+                    display: flex;
+                    column-gap: 1.5rem;
+    
+                    @media only screen and (min-width: 1152px) {
+                        column-gap: 2rem;
+                    }
+    
+                    .footer_social_link {
+                        color: $txt-color;
+                        font-size: 1.25rem;
+                        transition: color .4s, transform .4s;
+    
+                        @media only screen and (min-width: 1152px) {
+                            font-size: 1.5rem;
+                        }
+    
+                        &:hover {
+                            color: $title-color;
+                            transform: translateY(-.25rem);
+                        }
+                    }
+                }
+    
+                .footer_copy {
+                    font-size: $smaller-font-size;
+                    color: $text-color-light;
+                    text-align: center;
+    
+                    @media only screen and (min-width: 768px) {
+                        order: -1;
+                    }
+                }
+            }
+        }
+}
